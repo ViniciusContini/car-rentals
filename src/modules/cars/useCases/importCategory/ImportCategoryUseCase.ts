@@ -1,3 +1,4 @@
+import "express-async-errors";
 import { parse } from "csv-parse";
 import fs from "fs";
 import { inject, injectable } from "tsyringe";
@@ -19,10 +20,10 @@ class ImportCategoryUseCase {
   loadCategories(file: Express.Multer.File): Promise<IImportCategory[]> {
     return new Promise((resolve, reject) => {
       const stream = fs.createReadStream(file.path);
-
       const categories: IImportCategory[] = [];
 
       const parseFile = parse();
+
       stream.pipe(parseFile);
 
       parseFile
@@ -48,7 +49,6 @@ class ImportCategoryUseCase {
 
     categories.map(async (category) => {
       const { name, description } = category;
-
       const existCategory = await this.categoriesRepository.findByName(name);
 
       if (!existCategory) {
