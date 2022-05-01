@@ -66,17 +66,17 @@ O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.
 
 O usuário responsável pelo cadastro deve ser um usuário administrador.
 
-# Alugel de carro
+# Aluguel de carro
 
 **Requisito funcional**
 
-Deve ser possível cadastrar um alugel.
+Deve ser possível cadastrar um aluguel.
 
 **Requisito não funcional**
 
 **Regra de negocio**
 
-O alugel deve ter duração mínima de 24 horas.
+O aluguel deve ter duração mínima de 24 horas.
 
 Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário.
 
