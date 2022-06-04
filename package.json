@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
-    "test": "jest"
+    "test": "jest",
+    "seed:admin": "ts-node-dev src/infra/database/seed/admin.seed.ts"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
